@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "0",
+    "firebase_url": "",
+    "project_id": "0",
+    "storage_bucket": "0"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1",
+        "android_client_info": {
+          "package_name": "rs.fourexample.oab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5content.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5usercontent.com",
+              "client_type": 0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

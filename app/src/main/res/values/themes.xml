@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OAB" parent="Theme.MaterialComponents.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_800</item>
+        <item name="colorPrimaryVariant">@color/purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_700</item>
+        <item name="colorSecondaryVariant">@color/red_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="titleTextColor">@color/white</item>
+        <item name="actionBarTheme">@style/OAB.Actionbar</item>
+        <item name="android:navigationBarColor">@color/purple_light</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back</item>
+
+        <item name="android:textViewStyle">@style/RubikTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RubikButtonStyle</item>
+    </style>
+
+    <style name="OAB.Actionbar" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface" >
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:background" tools:targetApi="l">@color/red_700</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/red_700</item>
+        <item name="android:navigationBarColor">@color/red_700</item>
+    </style>
+
+    <style name="AuthTheme" parent="FirebaseUI">
+        <!-- Required for sign-in flow styling -->
+        <item name="colorPrimary">@color/purple_800</item>
+        <item name="colorPrimaryDark">@color/purple_dark</item>
+        <item name="colorAccent">@color/red_700</item>
+
+<!--        <item name="colorControlNormal">@color/material_green_500</item>-->
+<!--        <item name="colorControlActivated">@color/material_lime_a700</item>-->
+<!--        <item name="colorControlHighlight">@color/material_green_a200</item>-->
+        <item name="android:windowBackground">@color/purple_800</item>
+    </style>
+
+    <style name="RoundedButtonPositive" parent="RubikTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_rounded_positive_button</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RoundedButtonRed" parent="RoundedButtonPositive">
+        <item name="android:background">@drawable/selector_rounded_red_button</item>
+    </style>
+
+    <style name="RubikTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/font_rubik</item>
+    </style>
+
+    <style name="RubikButtonStyle" parent="android:Widget.Button">
+        <item name="android:fontFamily">@font/font_rubik</item>
+    </style>
+
+</resources>

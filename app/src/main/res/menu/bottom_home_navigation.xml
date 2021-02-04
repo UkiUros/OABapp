@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationList"
+        android:icon="@drawable/ic_droplet_red"
+        android:title="@string/Navigation.Home.Requests"  />
+    <item
+        android:id="@+id/navigationBloodTypeList"
+        android:icon="@drawable/ic_baseline_notifications_active"
+        android:title="@string/Navigation.Home.BloodTypeRequests"  />
+    <item
+        android:id="@+id/navigationProfile"
+        android:icon="@drawable/ic_baseline_person"
+        android:title="@string/Navigation.Home.Profile" />
+    <item
+        android:id="@+id/navigationSettings"
+        android:icon="@drawable/ic_baseline_settings"
+        android:title="@string/Navigation.Home.Settings" />
+</menu>

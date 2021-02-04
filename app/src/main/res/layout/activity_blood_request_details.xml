@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSecondary"
+    tools:context=".ui.BloodRequestDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/cardViewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="225dp" />
+
+        <TextView
+            android:id="@+id/textViewBloodType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/frame"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_top_rounded_corners_active"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:text="0+" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewFrame">
+
+        <include
+            android:id="@+id/includedLayout"
+            layout="@layout/layout_details_form" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

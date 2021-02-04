@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">OABapp</string>
+
+    <string name="facebook_application_id" translatable="false">0</string>
+    <string name="facebook_app_id" translatable="false">0</string>
+    <string name="fb_login_protocol_scheme" translatable="false">0</string>
+
+    <string name="Navigation.Home.Requests">Requests</string>
+    <string name="Navigation.Home.BloodTypeRequests">Matching types</string>
+    <string name="Navigation.Home.Profile">Profile</string>
+    <string name="Navigation.Home.Settings">Settings</string>
+
+    <string name="Dialog.Button.Yes">Yes</string>
+    <string name="Dialog.Button.No">No</string>
+
+    <string name="Settings.Item.LogOut">LOG OUT</string>
+    <string name="Settings.Item.LogIn">LOG IN</string>
+    <string name="Settings.Item.Terms">TERMS AND CONDITIONS</string>
+    <string name="Settings.Item.Privacy">PRIVACY POLICY</string>
+    <string name="Settings.Item.Version">© OAB app, Version %s</string>
+
+    <string name="Settings.Dialog.Message.LogOut">Are you sure you want to Log out and exit the app?</string>
+
+    <string name="ServerError.Dialog.Title">Error occurred</string>
+    <string name="ServerError.Dialog.Message">There was an error while contacting server. Try again?</string>
+
+    <string name="Profile.Button.Edit">Edit Profile</string>
+    <string name="Profile.Button.LogIn">Log In</string>
+    <string name="Profile.Input.Hint.Name">Full Name</string>
+    <string name="Profile.Input.Hint.Email">Email</string>
+    <string name="Profile.Input.Hint.Phone">Phone number</string>
+    <string name="Profile.Button.Save">Save changes</string>
+    <string name="Profile.Label.SelectBloodType">Subscribe Blood Type</string>
+    <string name="Profile.Label.SelectedBloodType">%s in %s</string>
+    <string name="Profile.Dialog.Unsubscribe.Title">Unsubscribe</string>
+    <string name="Profile.Dialog.Unsubscribe.Message">Are you sure you want to unsubscribe?</string>
+    <string name="Profile.Dialog.Unsubscribe.ButtonPositive">Yes</string>
+    <string name="Profile.Dialog.Unsubscribe.ButtonNegative">No</string>
+    <string name="Profile.Dialog.Subscribe.Title">Select blood type</string>
+
+    <string name="NewRequest.Title">Request donation</string>
+    <string name="NewRequest.Input.Hint.Phone">Phone number</string>
+    <string name="NewRequest.Input.Hint.Description">Additional details</string>
+    <string name="NewRequest.Input.Hint.Address">Address</string>
+    <string name="NewRequest.Info.Map">Move map to center the location marker</string>
+    <string name="NewRequest.Label.Phone">Phone number</string>
+    <string name="NewRequest.Label.Address">Address</string>
+    <string name="NewRequest.Label.EnterInfo">Enter Information</string>
+    <string name="NewRequest.Label.Description">Additional details</string>
+    <string name="NewRequest.Label.SelectBloodType">Select blood type</string>
+    <string name="NewRequest.Button.PostRequest">Send</string>
+    <string name="NewRequest.Dialog.Success.Message">Your help offer has been sent!</string>
+    <string name="NewRequest.Dialog.Success.Button">OK</string>
+
+
+    <string name="BloodType.ZeroPositive" translatable="false">O+</string>
+    <string name="BloodType.ZeroNegative" translatable="false">O-</string>
+    <string name="BloodType.APositive" translatable="false">A+</string>
+    <string name="BloodType.ANegative" translatable="false">A-</string>
+    <string name="BloodType.BPositive" translatable="false">B+</string>
+    <string name="BloodType.BNegative" translatable="false">B-</string>
+    <string name="BloodType.ABPositive" translatable="false">AB+</string>
+    <string name="BloodType.ABNegative" translatable="false">AB-</string>
+
+    <string name="BloodRequest.Item.Location">Looking for %s at <b>%s</b></string>
+    <string name="BloodRequest.Item.Button.Call">Call</string>
+    <string name="BloodRequest.Item.Button.OpenMap">Open in map</string>
+
+    <string name="CountryPicker.Title">Select supported country</string>
+    <string name="CountryPicker.Button">Set</string>
+
+    <string name="Dialog.CountryPicker.Title">Select supported country</string>
+    <string name="Dialog.CountryPicker.Item.Serbia">Serbia</string>
+    <string name="Dialog.CountryPicker.Item.Bosnia">Bosnia &amp; Herzegovina</string>
+
+    <string name="RequestDetails.Label.Status">Status: %s</string>
+    <string name="RequestDetails.Label.Name">Name</string>
+    <string name="RequestDetails.Label.Status.Active">Active</string>
+    <string name="RequestDetails.Label.Status.Completed">Completed</string>
+    <string name="RequestDetails.Label.Contact">Contact</string>
+    <string name="RequestDetails.Label.Address">Address</string>
+    <string name="RequestDetails.Label.Details">Details</string>
+
+    <string name="NotificationSubscriptions.Label.EmptyBloodType">Subscribe to notifications in your profile</string>
+    <string name="NotificationSubscriptions.Label.NoData">No matching blood type requests.</string>
+
+    <string name="BloodRequests.Label.NoData">No blood requests in your area.</string>
+
+    <string name="default_notification_channel_name" translatable="true">Blood Donation</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_donation_title" translatable="true">It\'s a match!</string>
+    <string name="default_notification_donation_message" translatable="true">Blood type %s requested at %s</string>
+
+
+</resources>

@@ -1,0 +1,140 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android-extensions'
+}
+
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionHotfix = 0
+ext.versionBuild = 1
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "rs.fourexample.oab"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        setProperty("archivesBaseName", "OAB${generateVersionName()}")
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", "\"enterYourKey\""
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'someAlias'
+            keyPassword 'pw'
+            storePassword 'pw'
+            storeFile file('../docs/release')
+        }
+        debug {
+            storeFile file("../docs/debug.keystore")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+
+        debug {
+//            applicationIdSuffix '.debug' // not needed for now
+            versionNameSuffix 'd'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "OAB-${variant.name}-${versionName}.apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+private Integer generateVersionCode() {
+    return ext.versionMajor * 1000000 +
+            ext.versionMinor * 10000 +
+            ext.versionHotfix * 100 +
+            ext.versionBuild
+}
+
+private String generateVersionName() {
+    return "${ext.versionMajor}.${ext.versionMinor}.${ext.versionHotfix}.${ext.versionBuild}"
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // hilt
+    def hilt_version = "2.31.2-alpha"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    def hilt_view_model = "1.0.0-alpha02"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_model"
+    kapt "androidx.hilt:hilt-compiler:$hilt_view_model"
+
+    // firebase
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+
+    // google stuff
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:1.1.0'
+
+    implementation 'com.facebook.android:facebook-login:5.15.3'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+}
