@@ -4,6 +4,9 @@ Play Store link: https://play.google.com/store/apps/details?id=rs.fourexample.oa
 
 This source is what I actually made in **less then 5 days** and there is always a possibility I could have done this better.
 
+#### Reported issue for bug on FirebaseSDK's GitHub
+https://github.com/firebase/firebase-android-sdk/issues/2385
+
 #### What does this app do?
 The app enables users to enter their blood type and get notified (via push notification) when other users publish blood donation requests nearby for the matching blood type.
 
